@@ -32,3 +32,5 @@ plot/
 
 doc/out.html
 doc/__pycache__/
+
+*/src/generated
