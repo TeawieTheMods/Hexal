@@ -46,7 +46,7 @@
       "type": "hexcasting:pattern",
       "header": "hexcasting.action.hexal:gate/mark/num/get",
       "op_id": "hexcasting:abs",
-      "anchor": "hexal:gate/mark/num/get",
+      "anchor": "hexcasting:abs",
       "input": "gate",
       "output": "num",
       "text": "hexal.page.gates.gate/mark/num/get"

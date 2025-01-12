@@ -92,7 +92,7 @@
       "type": "hexcasting:pattern",
       "header": "hexcasting.action.hexal:mote/count/get",
       "op_id": "hexcasting:abs",
-      "anchor": "hexal:mote/count/get",
+      "anchor": "hexcasting:abs",
       "input": "mote",
       "output": "int",
       "text": "hexal.page.motes.mote/count/get"
@@ -101,7 +101,7 @@
       "type": "hexcasting:pattern",
       "header": "hexcasting.action.hexal:mote/combine",
       "op_id": "hexcasting:add",
-      "anchor": "hexal:mote/combine",
+      "anchor": "hexcasting:add",
       "input": "mote, mote",
       "output": "mote",
       "text": "hexal.page.motes.mote/combine"
