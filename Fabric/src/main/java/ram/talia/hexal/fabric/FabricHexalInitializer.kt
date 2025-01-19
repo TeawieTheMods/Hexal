@@ -6,10 +6,16 @@ import at.petrak.hexcasting.common.lib.hex.HexActions
 import at.petrak.hexcasting.common.lib.hex.HexIotaTypes
 import at.petrak.hexcasting.xplat.IXplatAbstractions
 import net.fabricmc.api.ModInitializer
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents
+import net.fabricmc.fabric.api.tag.convention.v1.ConventionalBiomeTags
 import net.minecraft.core.Registry
 import net.minecraft.core.registries.BuiltInRegistries
+import net.minecraft.core.registries.Registries
+import net.minecraft.resources.ResourceKey
 import net.minecraft.resources.ResourceLocation
+import net.minecraft.world.level.levelgen.GenerationStep
 import ram.talia.hexal.api.HexalAPI
 import ram.talia.hexal.api.gates.GateManager
 import ram.talia.hexal.api.gates.GateSavedData
@@ -36,6 +42,12 @@ object FabricHexalInitializer : ModInitializer {
         initListeners()
 
         initRegistries()
+
+        BiomeModifications.addFeature(
+            BiomeSelectors.tag(ConventionalBiomeTags.IN_OVERWORLD),
+            GenerationStep.Decoration.UNDERGROUND_STRUCTURES,
+            ResourceKey.create(Registries.PLACED_FEATURE,  ResourceLocation("hexal", "amethyst_slipway_geode"))
+        );
     }
 
     private fun initListeners() {
